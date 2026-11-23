@@ -1,0 +1,35 @@
+[project]
+name = "anybot"
+version = "0.1.0"
+description = "Drop in any robot, control it in natural language: MuJoCo + MCP"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "foxglove-sdk>=0.31.0",
+    "httpx>=0.28.1",
+    "imageio-ffmpeg>=0.8.1",
+    "mcp[cli]>=2.3.0",
+    "mujoco>=4.0.0",
+    "numpy>=2.5.4",
+    "pillow>=13.0.0",
+    "robot-descriptions>=3.3.0",
+    "starlette>=1.10.0",
+    "torch>=2.15.0",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+anybot = "anybot.cli:main"
+anybot-mcp = "anybot.server:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+markers = ["slow: real-time simulation tests"]

@@ -1,0 +1,12 @@
+.venv*
+__pycache__/
+*.pyc
+.pytest_cache/
+MUJOCO_LOG.TXT
+*.mp4
+*.mov
+*.gif
+*.webm
+/media/
+.DS_Store
+!docs/demo.gif

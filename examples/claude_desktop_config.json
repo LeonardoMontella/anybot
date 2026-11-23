@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "anybot": {
+      "command": "/ABSOLUTE/PATH/TO/anybot-mcp/.venv/bin/mjpython",
+      "args": [
+        "-m",
+        "anybot.server",
+        "--viewer"
+      ]
+    }
+  }
+}
