@@ -240,7 +240,7 @@ def scene_title(seconds: float, still: bool):
     sh = Shot(sim.m)
     bg = sh.frame(sim.d.qpos, sim.d.xpos[sim._bid(sim.profile.root_body)] + [0, 0, 0.1], 3.2, 150, -12)
     sh.close()
-    img = card("anybot", "Any robot.  Any place.  Plain English.", bg)
+    img = card("anybot", "Any robot.  Any place.  Plain text.", bg)
     return [img] * (1 if still else int(seconds * FPS))
 
 
@@ -265,7 +265,7 @@ def scene_prompt(seconds: float, still: bool):
         t = 0.6 if still else k / n
         img = sh.frame(frames[i][0], base + [0.45, 0.0, 0.25], 1.45, 200 - 25 * t, -24)
         img = chat_panel(img, prompt, 1.0 if still else ease(k / (1.6 * FPS)), calls, 1.0 if still else ease((k - 1.8 * FPS) / (2 * FPS)))
-        img = caption(img, "Plain English in, robot actions out", "Any MCP client drives the simulation", x=548)
+        img = caption(img, "Plain text in, robot actions out", "Any MCP client drives the simulation", x=548)
         yield img
     sh.close()
 

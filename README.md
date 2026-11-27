@@ -1,6 +1,6 @@
 # anybot
 
-**Drop in any robot, put it in any place, tell it what to do in plain English.**
+**Drop in any robot, put it in any place, tell it what to do in plain text.**
 
 anybot imports a robot model it has never seen (MuJoCo XML or URDF), works out what kind of robot it is and
 how it moves, and exposes it to LLM agents through the [Model Context Protocol](https://modelcontextprotocol.io).
@@ -9,7 +9,7 @@ live in a browser, with real rigid-body physics in [MuJoCo](https://mujoco.org).
 
 ![anybot demo](docs/demo.gif)
 
-Runs on a laptop: developed on a MacBook Air M1 with 8 GB of RAM, no GPU server.
+Runs on a laptop: developed on a MacBook Pro M1 with 8 GB of RAM, no GPU server.
 
 ## What it does
 
